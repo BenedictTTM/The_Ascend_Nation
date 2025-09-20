@@ -1,0 +1,9 @@
+<svg width="500" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="400" fill="#fef2f2"/>
+  <rect width="460" height="360" x="20" y="20" fill="#fecaca" rx="8"/>
+  <text x="250" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#dc2626">Cross-Border Network</text>
+  <text x="250" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ef4444">Pan-African Collaboration</text>
+  <circle cx="120" cy="300" r="30" fill="#dc2626" opacity="0.4"/>
+  <circle cx="380" cy="300" r="30" fill="#dc2626" opacity="0.4"/>
+  <line x1="150" y1="300" x2="350" y2="300" stroke="#dc2626" stroke-width="3" opacity="0.6"/>
+</svg>
