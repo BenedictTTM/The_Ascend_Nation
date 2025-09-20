@@ -1,9 +1,8 @@
 'use client';
 
-import React, { Suspense } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
-import { Metadata } from 'next';
 import LoadingSkeleton from '../../components/ui/LoadingSkeleton';
 import Tan from '../../../public/TanM.jpg';
 import TanCeo from '../../../public/TanCeo.jpg';

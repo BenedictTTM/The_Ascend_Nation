@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, Suspense } from 'react';
+import React from 'react';
 import dynamic from 'next/dynamic';
 import LoadingSkeleton from '../../components/ui/LoadingSkeleton';
 
@@ -16,28 +16,6 @@ const Button = dynamic(() => import('../../components/Button'), {
 });
 
 export default function Membership() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Here you would typically send the data to your backend
-    alert('Thank you for your interest! We will contact you soon.');
-    setFormData({ name: '', email: '', message: '' });
-  };
-
   const membershipTiers = [
     {
       name: "Associate Member",
@@ -297,7 +275,7 @@ export default function Membership() {
                 Membership <span className="text-brand-red-600">Tiers</span>
               </h2>
               <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                Unlock unique opportunities to connect, grow, and contribute to Africa's transformation journey.
+                Unlock unique opportunities to connect, grow, and contribute to Africa&rsquo;s transformation journey.
                 Each tier offers carefully designed benefits to accelerate your professional development and impact.
               </p>
             </div>

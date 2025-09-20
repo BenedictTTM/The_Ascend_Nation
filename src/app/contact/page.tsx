@@ -1,47 +1,10 @@
 'use client';
 
-import React, { useState, Suspense } from 'react';
-import dynamic from 'next/dynamic';
-import LoadingSkeleton from '../../components/ui/LoadingSkeleton';
+import React from 'react';
 import { FaLinkedin, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { FiMail, FiMapPin } from 'react-icons/fi';
 
-// Dynamic imports
-const Card = dynamic(() => import('../../components/Card'), {
-  loading: () => <LoadingSkeleton type="card" />,
-  ssr: true
-});
-
-const Button = dynamic(() => import('../../components/Button'), {
-  loading: () => <div className="animate-pulse h-10 bg-gray-200 rounded w-32"></div>,
-  ssr: true
-});
-
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Contact form submitted:', formData);
-    alert('Thank you for contacting us! We will get back to you soon.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
-  };
-
   return (
     <div className="min-h-screen bg-brand-blue-50">
       {/* Hero Section */}
@@ -88,7 +51,7 @@ export default function Contact() {
               </p>
             </div>
 
-            <Card className="p-8 rounded-2xl shadow-md hover:shadow-xl transition-all">
+            <div className="p-8 rounded-2xl shadow-md hover:shadow-xl transition-all bg-white">
               <h3 className="text-xl font-bold text-gray-900 mb-6">Why Connect with TAN?</h3>
               <ul className="space-y-6">
                 {[
@@ -106,7 +69,7 @@ export default function Contact() {
                   </li>
                 ))}
               </ul>
-            </Card>
+            </div>
           </div>
         </div>
       </section>
@@ -123,7 +86,7 @@ export default function Contact() {
 
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Email */}
-            <Card className="p-8 rounded-2xl shadow hover:shadow-lg transition-all">
+            <div className="p-8 rounded-2xl shadow hover:shadow-lg transition-all bg-white">
               <h3 className="text-xl font-semibold text-gray-900 mb-6">Email Us</h3>
               <div className="space-y-5">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
@@ -145,10 +108,10 @@ export default function Contact() {
                   </a>
                 </div>
               </div>
-            </Card>
+            </div>
 
             {/* Locations */}
-            <Card className="p-8 rounded-2xl shadow hover:shadow-lg transition-all">
+            <div className="p-8 rounded-2xl shadow hover:shadow-lg transition-all bg-white">
               <h3 className="text-xl font-semibold text-gray-900 mb-6">Our Reach</h3>
               <p className="flex items-center gap-2 font-medium text-gray-900">
                 <FiMapPin size={20} color="#059669" aria-hidden="true" />
@@ -157,10 +120,10 @@ export default function Contact() {
               <p className="text-gray-600 mt-3">
                 Regional Offices: Lagos, Nairobi, Cape Town, Cairo
               </p>
-            </Card>
+            </div>
 
             {/* Socials */}
-            <Card className="p-8 text-center rounded-2xl shadow hover:shadow-lg transition-all">
+            <div className="p-8 text-center rounded-2xl shadow hover:shadow-lg transition-all bg-white">
               <h3 className="text-xl font-semibold text-gray-900 mb-6">Follow Us</h3>
               <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
                 <a
@@ -202,7 +165,7 @@ export default function Contact() {
                   <span className="font-medium">WhatsApp</span>
                 </a>
               </div>
-            </Card>
+            </div>
           </div>
         </div>
       </section>

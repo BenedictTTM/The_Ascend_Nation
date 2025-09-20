@@ -1,20 +1,7 @@
 'use client';
 
-import React, { Suspense } from 'react';
+import React from 'react';
 import Image from 'next/image';
-import dynamic from 'next/dynamic';
-import LoadingSkeleton from '../../components/ui/LoadingSkeleton';
-
-// Dynamic imports
-const Card = dynamic(() => import('../../components/Card'), {
-  loading: () => <LoadingSkeleton type="card" />,
-  ssr: true
-});
-
-const Button = dynamic(() => import('../../components/Button'), {
-  loading: () => <div className="animate-pulse h-10 bg-gray-200 rounded w-32"></div>,
-  ssr: true
-});
 
 export default function Programs() {
   const programs = [
@@ -241,9 +228,9 @@ export default function Programs() {
                   </div>
 
                   <div className="pt-2">
-                    <Button variant="primary" size="md">
+                    <button className="px-6 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors">
                       Learn More
-                    </Button>
+                    </button>
                   </div>
                 </div>
 
