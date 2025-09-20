@@ -19,8 +19,6 @@ const ImagesLoop = dynamic(() => import('@/components/ui/ImagesLoop'), {
 });
 
 export default function Home() {
-  const [showAfterText, setShowAfterText] = useState(false);
-  const [hovering, setHovering] = useState(false);
   const [containerHeight, setContainerHeight] = useState(600);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -145,7 +143,7 @@ export default function Home() {
                         </h3>
                         <p className="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed px-1 sm:px-2 font-mono font-['Inter']">
                           United in our mission to empower youth across every corner of the continent. 
-                          From the Mediterranean shores to the southern cape, we're building tomorrow's leaders today.
+                          From the Mediterranean shores to the southern cape, we&rsquo;re building tomorrow&rsquo;s leaders today.
                         </p>
                       </div>
                       

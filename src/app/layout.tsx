@@ -4,12 +4,6 @@ import dynamic from 'next/dynamic';
 import "./globals.css";
 
 // Optimize font loading
-const inter = Inter({ 
-  subsets: ['latin'],
-  display: 'swap',
-  preload: true
-});
-
 const poppins = Poppins({ 
   subsets: ['latin'],
   weight: ['400', '600', '700'],
